@@ -60,6 +60,33 @@ const projects: Project[] = [
     highlight: "End-to-end content automation",
     tags: ["AI", "Automation", "Social Media", "n8n"],
   },
+  {
+    category: "Business Automation",
+    location: "Egypt",
+    title: "Multi-Branch Retail Order & Inventory Automation",
+    description:
+      "Connected WhatsApp Business with inventory and CRM systems, with an AI agent handling customer inquiries and lead qualification automatically.",
+    highlight: "Significantly reduced manual workload for the operations team.",
+    tags: ["n8n", "WhatsApp API", "AI Agent", "Inventory"],
+  },
+  {
+    category: "Healthcare AI",
+    location: "Middle East",
+    title: "Smart Booking Agent for Multi-Doctor Clinic",
+    description:
+      "An AI agent handles bookings around the clock, checks real-time availability, and sends automated reminders to patients.",
+    highlight: "24/7 reception coverage without additional hiring.",
+    tags: ["AI Agent", "Calendar", "n8n", "Healthcare"],
+  },
+  {
+    category: "Business Intelligence",
+    location: "Global",
+    title: "Unified Operations Dashboard for Sales Teams",
+    description:
+      "A real-time dashboard aggregating sales and operations data from multiple sources into a single view.",
+    highlight: "Faster daily decisions backed by unified, reliable data.",
+    tags: ["Dashboard", "n8n", "API", "B2B"],
+  },
 ];
 
 const ProjectsSection = () => (

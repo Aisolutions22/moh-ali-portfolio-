@@ -1,6 +1,6 @@
 # Ai Solutions portfolio
 
-"Build a professional, modern personal portfolio website that is identical in layout, design system, and structure to this reference site: https://asmaasaeed.netlify.app/
+"Build a professional, modern personal portfolio website 
 
 Key Instructions for Mirroring:
 

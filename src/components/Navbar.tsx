@@ -16,7 +16,7 @@ const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
 
 // TODO: replace with your real WhatsApp number and LinkedIn profile URL
 const WHATSAPP_URL = "https://wa.me/201007292223";
-const LINKEDIN_URL = "linkedin.com/in/mohamed-åli-";
+const LINKEDIN_URL = "https://linkedin.com/in/mohamed-åli-";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

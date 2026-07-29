@@ -52,7 +52,7 @@ const SkillsSection = () => (
         live, AI-driven system, without handing off between roles.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start">
         {capabilities.map((cap, i) => (
           <motion.div
             key={cap.title}
@@ -67,8 +67,12 @@ const SkillsSection = () => (
 
             <div className="relative z-10">
               {cap.image ? (
-                <div className="w-12 h-12 rounded-xl overflow-hidden mb-4 border border-border/60">
-                  <img src={cap.image} alt="" className="w-full h-full object-cover" />
+                <div className="w-full rounded-lg overflow-hidden mb-4 border border-border/60 bg-muted">
+                  <img
+                    src={cap.image}
+                    alt={`${cap.title} screenshot`}
+                    className="w-full h-auto block"
+                  />
                 </div>
               ) : (
                 <motion.div

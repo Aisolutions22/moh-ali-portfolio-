@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Linkedin } from "lucide-react";
+import { Menu, X, Linkedin, Facebook } from "lucide-react";
 import logo from "@/assets/logo.webp";
 
 const navLinks = [
@@ -14,9 +14,9 @@ const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
   </svg>
 );
 
-// TODO: replace with your real WhatsApp number and LinkedIn profile URL
 const WHATSAPP_URL = "https://wa.me/201007292223";
 const LINKEDIN_URL = "https://linkedin.com/in/mohamed-åli-";
+const FACEBOOK_URL = "https://www.facebook.com/share/1Cd3zk5ZU7/";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -58,6 +58,16 @@ const Navbar = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <Linkedin size={18} />
+          </a>
+          <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Facebook size={18} />
           </a>
           <a
             href="#contact"
@@ -105,6 +115,15 @@ const Navbar = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Linkedin size={18} /> LinkedIn
+          </a>
+          <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Facebook size={18} /> Facebook
           </a>
           <a
             href="#contact"

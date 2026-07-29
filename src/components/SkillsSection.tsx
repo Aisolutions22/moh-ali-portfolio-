@@ -1,22 +1,40 @@
 import { motion } from "framer-motion";
 import { Compass, Target, type LucideIcon } from "lucide-react";
 
-interface Capability {
-  icon?: LucideIcon;
-  image?: string;
+interface FeatureCapability {
+  image: string;
+  title: string;
+  desc: string;
+  tags: string[];
+  reverse?: boolean;
+}
+
+interface CardCapability {
+  icon: LucideIcon;
   title: string;
   desc: string;
   tags: string[];
 }
 
-const capabilities: Capability[] = [
+// Order matters: n8n first, then Vibe Coding — shown as full-width feature rows
+const featureCapabilities: FeatureCapability[] = [
   {
-    // Drop the LinkedIn "Connected app with Lovable" screenshot at this path
+    image: "/images/capabilities/n8n-architecture.png",
+    title: "AI Automation Architect — n8n",
+    desc: "I architect production-grade automation systems on n8n — connecting APIs, AI models, and business logic into workflows that run a company's operations with minimal human intervention.",
+    tags: ["n8n", "Workflow Architecture", "AI Agents"],
+    reverse: false,
+  },
+  {
     image: "/images/capabilities/vibe-coding-lovable.png",
     title: "Vibe Coding — AI-Native Product Development",
     desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment — without waiting on a traditional dev cycle. Every project in this portfolio was built this way.",
     tags: ["Lovable", "Rapid Shipping", "0 → 1"],
+    reverse: true,
   },
+];
+
+const cardCapabilities: CardCapability[] = [
   {
     icon: Compass,
     title: "Digital Transformation Strategy",
@@ -28,13 +46,6 @@ const capabilities: Capability[] = [
     title: "GTM & End-to-End Sales Systems",
     desc: "From ideal customer profile to closed deal — I build the full go-to-market engine: positioning, outbound systems, pipeline architecture, and the automation that keeps every lead moving without manual follow-up.",
     tags: ["GTM Strategy", "Pipeline Design", "B2B Sales"],
-  },
-  {
-    // Drop an n8n workflow/architecture screenshot at this path
-    image: "/images/capabilities/n8n-architecture.png",
-    title: "AI Automation Architect — n8n",
-    desc: "I architect production-grade automation systems on n8n — connecting APIs, AI models, and business logic into workflows that run a company's operations with minimal human intervention.",
-    tags: ["n8n", "Workflow Architecture", "AI Agents"],
   },
 ];
 
@@ -52,8 +63,50 @@ const SkillsSection = () => (
         live, AI-driven system, without handing off between roles.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start">
-        {capabilities.map((cap, i) => (
+      {/* Feature rows: real proof, full width, alternating image side */}
+      <div className="flex flex-col divide-y divide-border/50 mb-14">
+        {featureCapabilities.map((cap, i) => (
+          <motion.div
+            key={cap.title}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+            className={`flex flex-col gap-8 py-10 md:items-center ${
+              cap.reverse ? "md:flex-row-reverse" : "md:flex-row"
+            }`}
+          >
+            <div className="w-full md:w-1/2">
+              <img
+                src={cap.image}
+                alt={`${cap.title} screenshot`}
+                className="w-full h-auto rounded-xl border border-border/60 shadow-sm"
+              />
+            </div>
+            <div className="w-full md:w-1/2">
+              <h3 className="font-semibold text-2xl text-foreground mb-3">{cap.title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">{cap.desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {cap.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Supporting capabilities: no visual proof asset, lighter card treatment */}
+      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-5">
+        Also part of the toolkit
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {cardCapabilities.map((cap, i) => (
           <motion.div
             key={cap.title}
             initial={{ opacity: 0, y: 16 }}
@@ -64,31 +117,16 @@ const SkillsSection = () => (
                        hover:border-primary/40 hover:shadow-[0_0_24px_rgba(251,146,60,0.2)] transition-all duration-300"
           >
             <div className="absolute inset-0 shimmer-badge pointer-events-none rounded-2xl" />
-
             <div className="relative z-10">
-              {cap.image ? (
-                <div className="w-full rounded-lg overflow-hidden mb-4 border border-border/60 bg-muted">
-                  <img
-                    src={cap.image}
-                    alt={`${cap.title} screenshot`}
-                    className="w-full h-auto block"
-                  />
-                </div>
-              ) : (
-                <motion.div
-                  className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {cap.icon && (
-                    <cap.icon className="w-5 h-5 text-primary group-hover:animate-pulse" strokeWidth={1.5} />
-                  )}
-                </motion.div>
-              )}
-
+              <motion.div
+                className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <cap.icon className="w-5 h-5 text-primary group-hover:animate-pulse" strokeWidth={1.5} />
+              </motion.div>
               <h3 className="font-semibold text-lg text-foreground mb-2">{cap.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{cap.desc}</p>
-
               <div className="flex flex-wrap gap-1.5">
                 {cap.tags.map((t) => (
                   <span

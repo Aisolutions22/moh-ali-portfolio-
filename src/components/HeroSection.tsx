@@ -69,25 +69,54 @@ const HeroSection = () => {
         </a>
       </div>
 
-      {/* Impact Cards */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {impactCards.map((card) => (
-          <div
-            key={card.label}
-            className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-border hover:border-primary/50 hover:shadow-[0_0_30px_rgba(251,146,60,0.25)] hover:scale-105 transition-all duration-300 cursor-default"
-          >
-            <card.icon
-              size={28}
-              className="text-primary mb-3 mx-auto group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300"
-            />
-            <div className="text-3xl font-bold text-foreground mb-1">{card.value}</div>
-            <div className="font-semibold text-foreground text-sm mb-1">{card.label}</div>
-            <div className="text-xs text-muted-foreground">{card.desc}</div>
-          </div>
-        ))}
+      {/* Impact Cards — interactive / expandable */}
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        {impactCards.map((card) => {
+          const isOpen = open === card.label;
+          return (
+            <button
+              key={card.label}
+              type="button"
+              aria-expanded={isOpen}
+              onClick={() => setOpen(isOpen ? null : card.label)}
+              className={`group p-6 rounded-2xl glass-card border transition-all duration-300 text-left ${
+                isOpen
+                  ? "border-primary/60 shadow-[0_0_30px_hsl(var(--ring)/0.25)]"
+                  : "border-border hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--ring)/0.2)] hover:scale-105"
+              }`}
+            >
+              <card.icon
+                size={28}
+                className="text-primary mb-3 group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1 leading-tight">
+                {card.value}
+              </div>
+              <div className="font-semibold text-foreground text-sm mb-2">{card.label}</div>
+              <div
+                className={`grid transition-all duration-300 ease-out ${
+                  isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="text-xs text-muted-foreground leading-relaxed pb-2">{card.desc}</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-primary">
+                {isOpen ? "Close" : "Explore"}
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                />
+              </span>
+            </button>
+          );
+        })}
       </div>
     </div>
   </section>
-);
+  );
+};
+
 
 export default HeroSection;

@@ -214,8 +214,8 @@ const ImpactStats = () => {
             <motion.div
               layout
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 transition-opacity duration-500"
-              animate={{ opacity: isOpen ? 1 : 0.65, scale: isOpen ? 1.06 : 1 }}
+              className="pointer-events-none absolute inset-y-0 right-0 w-3/5"
+              animate={{ opacity: isOpen ? 0.35 : 0.22, scale: isOpen ? 1.06 : 1 }}
               transition={{ duration: 0.5 }}
             >
               {renderVisual(s.visual, isOpen)}
@@ -225,7 +225,7 @@ const ImpactStats = () => {
               type="button"
               aria-expanded={isOpen}
               onClick={() => setOpen(isOpen ? null : s.label)}
-              className="relative z-10 w-full p-6 text-left"
+              className="relative z-10 w-full p-6 text-left bg-gradient-to-r from-card via-card/85 to-transparent rounded-2xl"
             >
               <div className="font-mono text-4xl lg:text-5xl font-bold leading-none text-foreground">
                 <CountUp target={s.target} suffix={s.suffix} active={inView} />

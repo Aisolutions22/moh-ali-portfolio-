@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Menu, X, Linkedin, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
 const navLinks = [
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Projects", href: "#projects" },
+  { label: "Capabilities", href: "/#capabilities" },
+  { label: "Projects", href: "/projects" },
 ];
+
 
 // Simple inline WhatsApp glyph (lucide-react has no official WhatsApp brand icon)
 const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (

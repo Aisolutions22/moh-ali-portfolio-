@@ -109,8 +109,52 @@ const AboutSection = () => (
       </div>
 
       <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-4">
+        Portfolio breakdown
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-14">
+        {portfolio.map((p) => (
+          <div
+            key={p.category}
+            className="p-6 rounded-2xl glass-card hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+          >
+            <div className="flex items-start justify-between gap-3 mb-3">
+              <h3 className="font-semibold text-foreground leading-snug">{p.category}</h3>
+              <span className="shrink-0 text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                {p.sector}
+              </span>
+            </div>
+            <dl className="space-y-2 text-sm">
+              <div className="flex gap-2">
+                <dt className="shrink-0 w-16 text-muted-foreground">Type</dt>
+                <dd className="text-foreground">{p.type}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="shrink-0 w-16 text-muted-foreground">Scope</dt>
+                <dd className="text-muted-foreground">{p.scope}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="shrink-0 w-16 text-muted-foreground">Impact</dt>
+                <dd className="text-foreground">{p.impact}</dd>
+              </div>
+            </dl>
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {p.stack.map((t) => (
+                <span
+                  key={t}
+                  className="text-[10px] px-2 py-1 rounded-md bg-secondary text-secondary-foreground"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-4">
         Sectors served
       </p>
+
       <div className="flex flex-wrap gap-2">
         {industries.map((ind) => (
           <span

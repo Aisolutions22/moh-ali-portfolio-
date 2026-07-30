@@ -7,6 +7,8 @@ interface FeatureCapability {
   desc: string;
   tags: string[];
   reverse?: boolean;
+  href: string;
+  caption?: string;
 }
 
 interface CardCapability {
@@ -24,6 +26,7 @@ const featureCapabilities: FeatureCapability[] = [
     desc: "I architect production-grade automation systems on n8n — connecting APIs, AI models, and business logic into workflows that run a company's operations with minimal human intervention.",
     tags: ["n8n", "Workflow Architecture", "AI Agents"],
     reverse: false,
+    href: "#projects",
   },
   {
     image: "/images/capabilities/vibe-coding-lovable.png",
@@ -31,6 +34,8 @@ const featureCapabilities: FeatureCapability[] = [
     desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment — without waiting on a traditional dev cycle. Every project in this portfolio was built this way.",
     tags: ["Lovable", "Rapid Shipping", "0 → 1"],
     reverse: true,
+    href: "#vibe-coding-projects",
+    caption: "Build business applications, internal tools, and SaaS products in Lovable",
   },
 ];
 
@@ -66,13 +71,14 @@ const SkillsSection = () => (
       {/* Feature rows: real proof, full width, alternating image side */}
       <div className="flex flex-col divide-y divide-border/50 mb-14">
         {featureCapabilities.map((cap, i) => (
-          <motion.div
+          <motion.a
             key={cap.title}
+            href={cap.href}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className={`flex flex-col gap-8 py-10 md:items-center ${
+            className={`group flex flex-col gap-8 py-10 md:items-center cursor-pointer ${
               cap.reverse ? "md:flex-row-reverse" : "md:flex-row"
             }`}
           >
@@ -80,11 +86,16 @@ const SkillsSection = () => (
               <img
                 src={cap.image}
                 alt={`${cap.title} screenshot`}
-                className="w-full h-auto rounded-xl border border-border/60 shadow-sm"
+                className="w-full h-auto rounded-xl border border-border/60 shadow-sm group-hover:border-primary/40 transition-colors duration-300"
               />
+              {cap.caption && (
+                <p className="mt-3 text-xs text-muted-foreground italic">"{cap.caption}"</p>
+              )}
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="font-semibold text-2xl text-foreground mb-3">{cap.title}</h3>
+              <h3 className="font-semibold text-2xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                {cap.title}
+              </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">{cap.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {cap.tags.map((t) => (
@@ -97,7 +108,7 @@ const SkillsSection = () => (
                 ))}
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
 

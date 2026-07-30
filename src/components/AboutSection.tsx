@@ -93,20 +93,6 @@ const AboutSection = () => (
         industrial, commercial, and service sectors in the Gulf, the Arab world, and Egypt.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {stats.map((s) => (
-          <div
-            key={s.label}
-            className="p-6 rounded-2xl glass-card hover:border-primary/40 hover:shadow-lg transition-all duration-300"
-          >
-            <div className="text-2xl lg:text-3xl font-bold text-gradient mb-2 leading-tight">
-              {s.value}
-            </div>
-            <div className="font-semibold text-foreground mb-1">{s.label}</div>
-            <div className="text-sm text-muted-foreground leading-relaxed">{s.desc}</div>
-          </div>
-        ))}
-      </div>
 
       <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-4">
         Portfolio breakdown

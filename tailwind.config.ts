@@ -103,6 +103,7 @@ export default {
   		fontFamily: {
   			sans: [
   				'Work Sans',
+  				'IBM Plex Sans Arabic',
   				'ui-sans-serif',
   				'system-ui',
   				'-apple-system',
@@ -124,6 +125,7 @@ export default {
   				'serif'
   			],
   			mono: [
+  				'IBM Plex Mono',
   				'Inconsolata',
   				'ui-monospace',
   				'SFMono-Regular',

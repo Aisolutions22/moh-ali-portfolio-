@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import { Compass, Target, type LucideIcon } from "lucide-react";
 
 interface FeatureCapability {
@@ -8,6 +10,7 @@ interface FeatureCapability {
   tags: string[];
   reverse?: boolean;
   href: string;
+  cta?: string;
   caption?: string;
 }
 
@@ -26,7 +29,8 @@ const featureCapabilities: FeatureCapability[] = [
     desc: "I architect production-grade automation systems on n8n — connecting APIs, AI models, and business logic into workflows that run a company's operations with minimal human intervention.",
     tags: ["n8n", "Workflow Architecture", "AI Agents"],
     reverse: false,
-    href: "#projects",
+    href: "/projects",
+    cta: "Explore My Projects",
   },
   {
     image: "/images/capabilities/vibe-coding-lovable.png",
@@ -54,6 +58,8 @@ const cardCapabilities: CardCapability[] = [
   },
 ];
 
+const MotionLink = motion(Link);
+
 const SkillsSection = () => (
   <section id="capabilities" className="py-24 px-6">
     <div className="max-w-6xl mx-auto">
@@ -71,9 +77,9 @@ const SkillsSection = () => (
       {/* Feature rows: real proof, full width, alternating image side */}
       <div className="flex flex-col divide-y divide-border/50 mb-14">
         {featureCapabilities.map((cap, i) => (
-          <motion.a
+          <MotionLink
             key={cap.title}
-            href={cap.href}
+            to={cap.href}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
@@ -107,8 +113,13 @@ const SkillsSection = () => (
                   </span>
                 ))}
               </div>
+              {cap.cta && (
+                <span className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium group-hover:scale-105 transition-transform duration-300">
+                  {cap.cta} <ArrowUpRight size={14} />
+                </span>
+              )}
             </div>
-          </motion.a>
+          </MotionLink>
         ))}
       </div>
 

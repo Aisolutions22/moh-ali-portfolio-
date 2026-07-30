@@ -95,6 +95,10 @@ html {
 }
 
 @layer utilities {
+  .font-almarai {
+    font-family: 'Almarai', var(--font-sans);
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--hero-gradient);

@@ -1,35 +1,8 @@
-import { useState } from "react";
-import { ArrowRight, ShieldCheck, Zap, Briefcase, Globe, Layers, ChevronDown } from "lucide-react";
-
-const impactCards = [
-  {
-    icon: Zap,
-    value: "7+",
-    label: "Automation Projects",
-    desc: "End-to-end AI & workflow systems delivered in production — from lead generation engines to full sales agents.",
-  },
-  {
-    icon: Briefcase,
-    value: "8+",
-    label: "Industries Served",
-    desc: "Aluminium & manufacturing, GTM / B2B sales, hotels & hospitality, restaurants, real estate, healthcare, education, and e-commerce.",
-  },
-  {
-    icon: Globe,
-    value: "Gulf • Arab World • Egypt",
-    label: "Markets Covered",
-    desc: "Projects delivered across the GCC, the wider Arab region, and Egypt — built for Arabic and English operations alike.",
-  },
-  {
-    icon: Layers,
-    value: "100%",
-    label: "Custom Solutions",
-    desc: "No templates. Every system is architected around the client's real process, data, and tooling.",
-  },
-];
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import ImpactStats from "./ImpactStats";
 
 const HeroSection = () => {
-  const [open, setOpen] = useState<string | null>(null);
+
 
   return (
 

@@ -22,6 +22,9 @@ const Index = () => (
       <Suspense fallback={<div style={{ minHeight: "500px" }} aria-hidden="true" />}>
         <VibeCodingSection />
       </Suspense>
+      <Suspense fallback={<div style={{ minHeight: "500px" }} aria-hidden="true" />}>
+        <AboutSection />
+      </Suspense>
       <Suspense fallback={<div style={{ minHeight: "600px" }} aria-hidden="true" />}>
         <ProjectsSection />
       </Suspense>

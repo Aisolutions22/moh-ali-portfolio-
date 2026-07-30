@@ -1,25 +1,5 @@
-const stats = [
-  {
-    value: "7+",
-    label: "Automation Projects",
-    desc: "End-to-end AI & workflow systems delivered in production — from lead generation engines to full sales agents.",
-  },
-  {
-    value: "8+",
-    label: "Industries Served",
-    desc: "Aluminium & manufacturing, GTM / B2B sales, hotels & hospitality, restaurants, real estate, healthcare, education, and e-commerce.",
-  },
-  {
-    value: "Gulf • Arab World • Egypt",
-    label: "Markets Covered",
-    desc: "Projects delivered across the GCC, the wider Arab region, and Egypt — built for Arabic and English operations alike.",
-  },
-  {
-    value: "100%",
-    label: "Custom Solutions",
-    desc: "No templates. Every system is architected around the client's real process, data, and tooling.",
-  },
-];
+
+
 
 const industries = [
   "Aluminium & Manufacturing",

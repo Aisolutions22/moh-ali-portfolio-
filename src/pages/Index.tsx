@@ -5,6 +5,7 @@ import GeometricBackground from "@/components/GeometricBackground";
 
 const SkillsSection = lazy(() => import("@/components/SkillsSection"));
 const VibeCodingSection = lazy(() => import("@/components/VibeCodingSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ProjectsSection = lazy(() => import("@/components/ProjectsSection"));
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));

@@ -33,14 +33,15 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
+              to={l.href}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
+
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -71,12 +72,13 @@ const Navbar = () => {
           >
             <Facebook size={18} />
           </a>
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-[#0A192F] hover:scale-105 hover:shadow-lg transition-all duration-300"
           >
             Contact
-          </a>
+          </Link>
+
         </div>
 
         <button
@@ -91,15 +93,16 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden glass-card border-t border-border/50 px-6 py-4 space-y-3">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
+              to={l.href}
               onClick={() => setOpen(false)}
               className="block text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
+
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -127,13 +130,14 @@ const Navbar = () => {
           >
             <Facebook size={18} /> Facebook
           </a>
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             onClick={() => setOpen(false)}
             className="block px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium text-center"
           >
             Contact
-          </a>
+          </Link>
+
         </div>
       )}
     </nav>

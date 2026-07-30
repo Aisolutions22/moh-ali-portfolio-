@@ -1,13 +1,38 @@
-import { ArrowRight, ShieldCheck, Zap, Briefcase, Globe, Layers } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, ShieldCheck, Zap, Briefcase, Globe, Layers, ChevronDown } from "lucide-react";
 
 const impactCards = [
-  { icon: Zap, value: "15+", label: "Automation Projects", desc: "Real-world AI & workflow systems delivered" },
-  { icon: Briefcase, value: "10+", label: "Industries Served", desc: "Hotels, Real Estate, Sales, & Content" },
-  { icon: Globe, value: "6+", label: "Countries", desc: "Projects delivered and managed globally" },
-  { icon: Layers, value: "100%", label: "Custom Solutions", desc: "Fully tailored architecture, no templates" },
+  {
+    icon: Zap,
+    value: "7+",
+    label: "Automation Projects",
+    desc: "End-to-end AI & workflow systems delivered in production — from lead generation engines to full sales agents.",
+  },
+  {
+    icon: Briefcase,
+    value: "8+",
+    label: "Industries Served",
+    desc: "Aluminium & manufacturing, GTM / B2B sales, hotels & hospitality, restaurants, real estate, healthcare, education, and e-commerce.",
+  },
+  {
+    icon: Globe,
+    value: "Gulf • Arab World • Egypt",
+    label: "Markets Covered",
+    desc: "Projects delivered across the GCC, the wider Arab region, and Egypt — built for Arabic and English operations alike.",
+  },
+  {
+    icon: Layers,
+    value: "100%",
+    label: "Custom Solutions",
+    desc: "No templates. Every system is architected around the client's real process, data, and tooling.",
+  },
 ];
 
-const HeroSection = () => (
+const HeroSection = () => {
+  const [open, setOpen] = useState<string | null>(null);
+
+  return (
+
   <section className="flex flex-col items-center justify-start text-center px-6 pt-20 pb-10 relative overflow-hidden min-h-[600px] lg:min-h-[750px]">
     <div className="relative z-10 w-full max-w-6xl min-h-[560px] lg:min-h-[680px]">
       {/* Badge */}

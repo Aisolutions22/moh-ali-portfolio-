@@ -84,9 +84,10 @@ const AboutSection = () => (
   <section id="about" className="py-24 px-6">
     <div className="max-w-6xl mx-auto">
       <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
-        Track Record
+        Our Projects
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Projects in Numbers</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Projects Overview</h2>
+
       <p className="text-muted-foreground text-lg max-w-3xl mb-16 leading-relaxed">
         I'm Mohamed Ali, Founder of AI Solutions | Automation &amp; AI Specialist. I build practical
         AI systems that replace manual operations with measurable business results — across

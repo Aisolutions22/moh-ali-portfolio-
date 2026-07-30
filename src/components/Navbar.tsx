@@ -15,7 +15,7 @@ const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
 );
 
 const WHATSAPP_URL = "https://wa.me/201007292223";
-const LINKEDIN_URL = "https://linkedin.com/in/mohamed-åli-";
+const LINKEDIN_URL = "https://www.linkedin.com/in/mohamed-ali-";
 const FACEBOOK_URL = "https://www.facebook.com/share/1Cd3zk5ZU7/";
 
 const Navbar = () => {

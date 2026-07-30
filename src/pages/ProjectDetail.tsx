@@ -66,9 +66,12 @@ const ProjectDetail = () => {
             <ArrowLeft size={14} /> All projects
           </Link>
 
-          <span className="text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-            {project.sector}
-          </span>
+          <div>
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+              {project.sector}
+            </span>
+          </div>
+
           <h1 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">
             {project.title}
           </h1>

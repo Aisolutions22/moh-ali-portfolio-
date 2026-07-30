@@ -41,7 +41,14 @@ const VibeCodingSection = () => (
             className="rounded-2xl overflow-hidden glass-card border border-border/60 hover:border-primary/40 hover:shadow-lg transition-all duration-300"
           >
             <div className="aspect-video w-full bg-muted overflow-hidden">
-              <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+              <img
+                src={p.image}
+                alt={p.title}
+                width={1280}
+                height={720}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-4">
               <h3 className="text-sm font-medium text-foreground">{p.title}</h3>

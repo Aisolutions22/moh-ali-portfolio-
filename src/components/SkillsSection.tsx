@@ -38,7 +38,7 @@ const featureCapabilities: FeatureCapability[] = [
     desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment — without waiting on a traditional dev cycle. Every project in this portfolio was built this way.",
     tags: ["Lovable", "Rapid Shipping", "0 → 1"],
     reverse: true,
-    href: "#vibe-coding-projects",
+    href: "/#vibe-coding-projects",
     caption: "Build business applications, internal tools, and SaaS products in Lovable",
   },
 ];

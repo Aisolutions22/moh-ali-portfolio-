@@ -35,9 +35,19 @@ const Projects = () => (
           Case Studies
         </p>
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">All Projects</h1>
-        <p className="text-muted-foreground text-lg max-w-2xl mb-12">
+        <p className="text-muted-foreground text-lg max-w-2xl mb-6">
           Production automation and AI agent systems, built end-to-end. Open any project to read
           the full case study.
+        </p>
+        <p className="text-muted-foreground max-w-2xl mb-12">
+          New to the stack behind these builds?{" "}
+          <Link
+            to="/blog/what-is-n8n-ai-automation"
+            className="text-primary font-medium hover:underline"
+          >
+            Read the guide: what is n8n for AI automation
+          </Link>
+          .
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

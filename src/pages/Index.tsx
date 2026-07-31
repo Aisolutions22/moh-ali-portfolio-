@@ -13,6 +13,9 @@ const ContactSection = lazy(() => import("@/components/ContactSection"));
 
 const Index = () => (
   <div className="min-h-screen">
+    <Helmet>
+      <title>Mohamed Ali | AI Automation & GTM Specialist — Egypt & GCC</title>
+    </Helmet>
     <GeometricBackground />
     <Navbar />
     <main>

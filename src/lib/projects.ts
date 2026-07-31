@@ -151,4 +151,4 @@ export const projects: Project[] = [
 export const getProjectBySlug = (slug?: string) =>
   projects.find((p) => p.slug === slug);
 
-export const SITE_URL = "https://moh-ali.lovable.app";
+export const SITE_URL = "https://aisolutions-n8n.com";

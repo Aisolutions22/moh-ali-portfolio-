@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GeometricBackground from "@/components/GeometricBackground";
 
-
 const SkillsSection = lazy(() => import("@/components/SkillsSection"));
 const VibeCodingSection = lazy(() => import("@/components/VibeCodingSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));

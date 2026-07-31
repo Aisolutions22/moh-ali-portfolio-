@@ -110,9 +110,9 @@ const ImpactStats = () => {
                 {s.unit && <span className="ml-2 text-xl font-semibold">{s.unit}</span>}
               </div>
 
-              <h3 className="font-almarai mt-3 text-sm font-bold tracking-wide text-foreground">
+              <h2 className="font-almarai mt-3 text-sm font-bold tracking-wide text-foreground">
                 {s.label}
-              </h3>
+              </h2>
 
               <span className="mt-5 inline-flex items-center gap-2 text-xs font-medium text-primary">
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-primary/50 bg-primary/10 transition-shadow duration-300 group-hover:shadow-[0_0_14px_hsl(var(--ring)/0.55)]">

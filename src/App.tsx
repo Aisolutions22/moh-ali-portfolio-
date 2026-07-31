@@ -6,12 +6,18 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
+import { useScrollToHash } from "@/hooks/useScrollToHash";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const Projects = lazy(() => import("./pages/Projects.tsx"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail.tsx"));
 
 const queryClient = new QueryClient();
+
+const ScrollToHash = () => {
+  useScrollToHash();
+  return null;
+};
 
 const App = () => (
   <HelmetProvider>
@@ -20,6 +26,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToHash />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route

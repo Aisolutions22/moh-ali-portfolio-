@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Capabilities", href: "/#capabilities" },
   { label: "Projects", href: "/projects" },
 ];
@@ -26,10 +27,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-2.5 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <img src={logo} alt="AI Solutions Logo" width={52} height={48} className="h-11 w-auto" />
           <span className="text-lg font-bold tracking-tight text-foreground">AI Solutions</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
@@ -108,7 +109,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <WhatsAppIcon size={18} /> WhatsApp
           </a>
@@ -117,7 +118,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Linkedin size={18} /> LinkedIn
           </a>
@@ -126,7 +127,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Facebook size={18} /> Facebook
           </a>

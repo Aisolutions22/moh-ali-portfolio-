@@ -14,6 +14,11 @@ const ProjectDetail = lazy(() => import("./pages/ProjectDetail.tsx"));
 
 const queryClient = new QueryClient();
 
+const ScrollToHash = () => {
+  useScrollToHash();
+  return null;
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -21,6 +26,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToHash />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route

@@ -1,0 +1,15 @@
+<!-- This file must be updated manually whenever a project slug is added to src/lib/projects.ts. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://aisolutions-n8n.com/</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/ai-marketing-ecommerce-automation</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/lead-generation-engine</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/ai-sales-agent-instagram-messenger</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/whatsapp-business-sales-agent</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/telegram-study-assistant</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/dental-clinic-automation</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/meeting-transcription-automation</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/contracts-risk-management</loc></url>
+  <url><loc>https://aisolutions-n8n.com/projects/orders-inventory-automation</loc></url>
+</urlset>

@@ -1,0 +1,25 @@
+# Mohamed Ali — AI Solutions
+
+> Founder of AI Solutions. AI automation and workflow specialist based in Egypt,
+> serving clients across Egypt, the Gulf (Saudi Arabia, UAE, Kuwait, Qatar), Jordan,
+> Turkey, and Germany. 32+ production automation and AI agent systems delivered
+> across 10 industries, including aluminum & manufacturing, GTM/B2B sales,
+> hospitality, real estate, healthcare, and education.
+
+## Projects
+
+- [All Projects](https://aisolutions-n8n.com/projects)
+- [AI-Driven Marketing & E-commerce Automation System](https://aisolutions-n8n.com/projects/ai-marketing-ecommerce-automation)
+- [Lead Generation Engine](https://aisolutions-n8n.com/projects/lead-generation-engine)
+- [AI Sales Agent — Instagram & Messenger](https://aisolutions-n8n.com/projects/ai-sales-agent-instagram-messenger)
+- [WhatsApp Business API Sales Agent](https://aisolutions-n8n.com/projects/whatsapp-business-sales-agent)
+- [Telegram Study Assistant](https://aisolutions-n8n.com/projects/telegram-study-assistant)
+- [Dental Clinic Automation](https://aisolutions-n8n.com/projects/dental-clinic-automation)
+- [Meeting Recording & Transcription](https://aisolutions-n8n.com/projects/meeting-transcription-automation)
+- [Contracts & Risk Management](https://aisolutions-n8n.com/projects/contracts-risk-management)
+- [Orders & Inventory Automation](https://aisolutions-n8n.com/projects/orders-inventory-automation)
+
+## Contact
+
+- WhatsApp: https://wa.me/201007292223
+- LinkedIn: https://www.linkedin.com/in/mohamed-ali-

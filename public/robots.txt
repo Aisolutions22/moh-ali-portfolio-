@@ -31,4 +31,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://aisolutions-n8n.com/sitemap.xml
+Sitemap: https://moh-ali.lovable.app/sitemap.xml

@@ -44,6 +44,17 @@ html {
     --glow-orange: 0 0 80px hsl(24, 95%, 53%, 0.12);
     --glow-pink: 0 0 80px hsl(340, 82%, 52%, 0.08);
 
+    /* Shared accent glow color (equivalent to rgba(251,146,60)) */
+    --glow-accent: 27 96% 61%;
+
+    /* Deep navy hover color */
+    --hover-deep: 210 45% 12%;
+
+    /* Peach gradient stops */
+    --gradient-peach-light: 34 100% 92%;
+    --gradient-peach: 32 98% 83%;
+
+
     --chart-1: 24 95% 53%;
     --chart-2: 340 82% 52%;
     --chart-3: 220 70% 50%;

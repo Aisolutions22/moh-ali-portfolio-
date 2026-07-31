@@ -35,13 +35,13 @@ const ProcessSection = () => (
             >
               {/* Glowing dot */}
               <div className="relative z-10 flex-shrink-0 mt-1">
-                <div className="w-[30px] h-[30px] md:w-[38px] md:h-[38px] rounded-full bg-background border-2 border-primary/50 flex items-center justify-center shadow-[0_0_16px_rgba(251,146,60,0.35)]">
+                <div className="w-[30px] h-[30px] md:w-[38px] md:h-[38px] rounded-full bg-background border-2 border-primary/50 flex items-center justify-center shadow-[0_0_16px_hsl(var(--glow-accent)/0.35)]">
                   <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-primary" />
                 </div>
               </div>
 
               {/* Card */}
-              <div className="flex-1 p-5 md:p-6 rounded-2xl glass-card hover:border-primary/30 hover:shadow-[0_0_24px_rgba(251,146,60,0.12)] transition-all duration-300">
+              <div className="flex-1 p-5 md:p-6 rounded-2xl glass-card hover:border-primary/30 hover:shadow-[0_0_24px_hsl(var(--glow-accent)/0.12)] transition-all duration-300">
                 <span className="text-xs font-bold text-primary/70 tracking-widest">{s.num}</span>
                 <h3 className="font-semibold text-foreground mt-1 mb-1.5 text-lg">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>

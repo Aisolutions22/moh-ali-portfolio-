@@ -136,7 +136,7 @@ const SkillsSection = () => (
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
             className="group relative p-6 rounded-2xl glass-card border border-border/60 overflow-hidden
-                       hover:border-primary/40 hover:shadow-[0_0_24px_rgba(251,146,60,0.2)] transition-all duration-300"
+                       hover:border-primary/40 hover:shadow-[0_0_24px_hsl(var(--glow-accent)/0.2)] transition-all duration-300"
           >
             <div className="absolute inset-0 shimmer-badge pointer-events-none rounded-2xl" />
             <div className="relative z-10">

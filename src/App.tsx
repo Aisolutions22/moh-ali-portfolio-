@@ -11,6 +11,7 @@ import { useScrollToHash } from "@/hooks/useScrollToHash";
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const Projects = lazy(() => import("./pages/Projects.tsx"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail.tsx"));
+const WhatIsN8nAiAutomation = lazy(() => import("./pages/WhatIsN8nAiAutomation.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,14 @@ const App = () => (
               element={
                 <Suspense fallback={null}>
                   <ProjectDetail />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/blog/what-is-n8n-ai-automation"
+              element={
+                <Suspense fallback={null}>
+                  <WhatIsN8nAiAutomation />
                 </Suspense>
               }
             />

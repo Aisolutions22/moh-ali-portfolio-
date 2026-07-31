@@ -1,64 +1,5 @@
-
-
-
-const industries = [
-  "Aluminium & Manufacturing",
-  "GTM & B2B Sales",
-  "Hotels & Hospitality",
-  "Restaurants & F&B",
-  "Real Estate",
-  "Healthcare & Clinics",
-  "Education",
-  "E-commerce & Retail",
-  "Logistics & Supply Chain",
-  "Legal & Contracts",
-  "Marketing Agencies",
-  "Professional Services",
-];
-
-const portfolio = [
-  {
-    category: "Marketing & E-commerce Automation",
-    sector: "E-commerce / Retail",
-    type: "AI marketing ecosystem",
-    scope: "Shopify & WooCommerce integration, AI engagement, nurturing, auto-reporting",
-    impact: "Replaces traditional media buying with an autonomous growth engine",
-    stack: ["n8n", "AI Agents", "Shopify"],
-  },
-  {
-    category: "Sales & Lead Generation",
-    sector: "GTM / B2B Sales",
-    type: "Outbound data + AI agents",
-    scope: "Lead scraping & enrichment, WhatsApp / Instagram / Messenger sales agents",
-    impact: "Hours of manual research reduced to a daily automated lead list; one system covering a 5-person sales desk",
-    stack: ["Apify", "Apollo", "WhatsApp API", "OpenAI"],
-  },
-  {
-    category: "Operations & Back Office",
-    sector: "Manufacturing / Aluminium / Logistics",
-    type: "Process automation",
-    scope: "Orders & inventory sync, meeting transcription, task routing, reporting",
-    impact: "Self-running stock and order flows with zero daily admin overhead",
-    stack: ["n8n", "Supabase", "OpenAI"],
-  },
-  {
-    category: "Service & Client Experience",
-    sector: "Healthcare / Hospitality / Education",
-    type: "Booking & follow-up agents",
-    scope: "Clinic booking and reminders, guest handling, PDF-to-lesson study assistant",
-    impact: "24/7 Arabic & English response with automatic patient and parent follow-up",
-    stack: ["WhatsApp API", "Telegram", "Supabase"],
-  },
-  {
-    category: "Risk & Compliance",
-    sector: "Legal / Professional Services",
-    type: "Document intelligence",
-    scope: "Contract parsing, clause and risk detection, escalation workflows",
-    impact: "Contractual risks surfaced before they turn into financial loss",
-    stack: ["OpenAI", "n8n", "Supabase"],
-  },
-];
-
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => (
   <section id="about" className="py-24 px-6">
@@ -68,70 +9,22 @@ const AboutSection = () => (
       </p>
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Projects Overview</h2>
 
-      <p className="text-muted-foreground text-lg max-w-3xl mb-16 leading-relaxed">
+      <p className="text-muted-foreground text-lg max-w-3xl mb-8 leading-relaxed">
         I'm Mohamed Ali, Founder of AI Solutions | Automation &amp; AI Specialist. I build practical
         AI systems that replace manual operations with measurable business results — across
         industrial, commercial, and service sectors in the Gulf, the Arab world, and Egypt.
       </p>
 
-
-      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-4">
-        Portfolio breakdown
-      </p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-14">
-        {portfolio.map((p) => (
-          <div
-            key={p.category}
-            className="p-6 rounded-2xl glass-card hover:border-primary/40 hover:shadow-lg transition-all duration-300"
-          >
-            <div className="flex items-start justify-between gap-3 mb-3">
-              <h3 className="font-semibold text-foreground leading-snug">{p.category}</h3>
-              <span className="shrink-0 text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                {p.sector}
-              </span>
-            </div>
-            <dl className="space-y-2 text-sm">
-              <div className="flex gap-2">
-                <dt className="shrink-0 w-16 text-muted-foreground">Type</dt>
-                <dd className="text-foreground">{p.type}</dd>
-              </div>
-              <div className="flex gap-2">
-                <dt className="shrink-0 w-16 text-muted-foreground">Scope</dt>
-                <dd className="text-muted-foreground">{p.scope}</dd>
-              </div>
-              <div className="flex gap-2">
-                <dt className="shrink-0 w-16 text-muted-foreground">Impact</dt>
-                <dd className="text-foreground">{p.impact}</dd>
-              </div>
-            </dl>
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              {p.stack.map((t) => (
-                <span
-                  key={t}
-                  className="text-[10px] px-2 py-1 rounded-md bg-secondary text-secondary-foreground"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-4">
-        Sectors served
-      </p>
-
-      <div className="flex flex-wrap gap-2">
-        {industries.map((ind) => (
-          <span
-            key={ind}
-            className="text-xs px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground"
-          >
-            {ind}
-          </span>
-        ))}
-      </div>
+      <Link
+        to="/projects"
+        className="group inline-flex items-center gap-2 relative overflow-hidden rounded-full px-7 py-3.5 text-sm font-medium bg-foreground text-background shadow-lg glow-box shimmer-badge hover:scale-[1.03] hover:shadow-xl transition-all duration-300 motion-reduce:transform-none motion-reduce:shadow-lg"
+      >
+        <span className="relative z-10">Explore Our Projects</span>
+        <ArrowRight
+          size={16}
+          className="relative z-10 group-hover:translate-x-1 transition-transform duration-300 motion-reduce:transform-none"
+        />
+      </Link>
     </div>
   </section>
 );

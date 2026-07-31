@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GeometricBackground from "@/components/GeometricBackground";
+import { SITE_URL } from "@/lib/projects";
 
 const SkillsSection = lazy(() => import("@/components/SkillsSection"));
 const VibeCodingSection = lazy(() => import("@/components/VibeCodingSection"));
@@ -14,6 +15,33 @@ const Index = () => (
   <div className="min-h-screen">
     <Helmet>
       <title>Mohamed Ali | AI Automation & GTM Specialist — Egypt & GCC</title>
+      <link rel="canonical" href={`${SITE_URL}/`} />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": `${SITE_URL}/#organization`,
+          name: "AI Solutions",
+          url: `${SITE_URL}/`,
+          logo: `${SITE_URL}/images/og-cover.jpg`,
+          founder: {
+            "@type": "Person",
+            name: "Mohamed Ali",
+            jobTitle: "AI Automation & GTM Specialist",
+          },
+          areaServed: ["Egypt", "GCC", "Middle East"],
+        })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": `${SITE_URL}/#website`,
+          url: `${SITE_URL}/`,
+          name: "Mohamed Ali — AI Solutions",
+          publisher: { "@id": `${SITE_URL}/#organization` },
+        })}
+      </script>
     </Helmet>
     <GeometricBackground />
     <Navbar />

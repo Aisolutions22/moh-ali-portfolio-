@@ -21,7 +21,9 @@ const Projects = () => (
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${SITE_URL}/projects`} />
+      <meta property="og:image" content={`${SITE_URL}/images/og-cover.jpg`} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={`${SITE_URL}/images/og-cover.jpg`} />
     </Helmet>
 
     <GeometricBackground />

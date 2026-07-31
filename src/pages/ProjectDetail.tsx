@@ -30,7 +30,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{`${project.title} — Case Study | AI Solutions`}</title>
+        <title>{`Mohamed Ali | ${project.title}`}</title>
         <meta name="description" content={project.shortDescription} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={project.title} />

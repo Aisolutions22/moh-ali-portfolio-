@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -11,6 +12,9 @@ const ContactSection = lazy(() => import("@/components/ContactSection"));
 
 const Index = () => (
   <div className="min-h-screen">
+    <Helmet>
+      <title>Mohamed Ali | AI Automation & GTM Specialist — Egypt & GCC</title>
+    </Helmet>
     <GeometricBackground />
     <Navbar />
     <main>

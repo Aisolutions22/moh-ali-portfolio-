@@ -3,10 +3,12 @@ import { useLocation } from "react-router-dom";
 
 /**
  * Smoothly scrolls to the element matching location.hash whenever the
- * route or hash changes. Retries briefly while the route is still mounting.
+ * route, hash, or navigation entry changes. Retries briefly while the
+ * route is still mounting. Including `key` makes repeated clicks on the
+ * same hash link (e.g. Home -> /#hero) re-trigger the scroll.
  */
 export const useScrollToHash = () => {
-  const { hash, pathname } = useLocation();
+  const { hash, pathname, key } = useLocation();
 
   useEffect(() => {
     if (!hash) return;
@@ -20,7 +22,8 @@ export const useScrollToHash = () => {
       if (cancelled) return;
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: top <= 120 ? 0 : top, behavior: "smooth" });
         return;
       }
       if (frame++ < 40) {
@@ -34,7 +37,7 @@ export const useScrollToHash = () => {
       cancelled = true;
       if (timer) window.clearTimeout(timer);
     };
-  }, [hash, pathname]);
+  }, [hash, pathname, key]);
 };
 
 export default useScrollToHash;

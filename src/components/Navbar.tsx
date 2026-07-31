@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
 const navLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#hero" },
   { label: "Capabilities", href: "/#capabilities" },
   { label: "Projects", href: "/projects" },
 ];

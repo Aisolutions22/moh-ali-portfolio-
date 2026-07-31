@@ -6,7 +6,7 @@ const HeroSection = () => {
 
   return (
 
-  <section className="flex flex-col items-center justify-start text-center px-6 pt-20 pb-10 relative overflow-hidden min-h-[600px] lg:min-h-[750px]">
+  <section id="hero" className="flex flex-col items-center justify-start text-center px-6 pt-20 pb-10 relative overflow-hidden min-h-[600px] lg:min-h-[750px]">
     <div className="relative z-10 w-full max-w-6xl min-h-[560px] lg:min-h-[680px]">
       {/* Badge */}
       <div className="shimmer-badge pulse-badge inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/80 text-white mb-6 shadow-[0_0_20px_rgba(251,146,60,0.4),0_0_40px_rgba(0,82,255,0.2)]">

@@ -83,6 +83,8 @@ Individual project case studies live at `/projects` (index) and `/projects/:slug
 
 **Content rule:** case-study text here is written from a first-person, founder perspective — distinct from the company site's client-facing framing of the same projects — to avoid duplicate-content SEO issues across the two properties.
 
+**Sitemap rule:** `public/sitemap.xml` must be updated manually whenever a project slug is added to `src/lib/projects.ts` (the project list is static and the sitemap is not auto-generated).
+
 ## Design System
 
 | Token | Value | Usage |

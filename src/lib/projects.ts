@@ -137,7 +137,8 @@ export const projects: Project[] = [
     slug: "orders-inventory-automation",
     sector: "Retail",
     title: "Orders & Inventory Automation",
-    shortDescription: "Stock levels and orders that run themselves.",
+    shortDescription:
+      "Stock levels, orders, and supplier data that sync and run themselves, so overselling and daily reconciliation admin simply stop.",
     fullDescription: [
       "Orders, stock movements, and supplier data are synchronised continuously between the store, the warehouse sheet, and the database — one source of truth instead of three that disagree.",
       "Low-stock thresholds trigger purchase suggestions, and fulfilment status updates flow back to the customer automatically.",

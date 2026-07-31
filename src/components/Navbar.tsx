@@ -75,7 +75,7 @@ const Navbar = () => {
           </a>
           <Link
             to="/#contact"
-            className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-[#0A192F] hover:scale-105 hover:shadow-lg transition-all duration-300"
+            className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-[hsl(var(--hover-deep))] hover:scale-105 hover:shadow-lg transition-all duration-300"
           >
             Contact
           </Link>

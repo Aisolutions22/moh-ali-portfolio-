@@ -15,7 +15,13 @@ const circles = [
 
 const GeometricBackground = () => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ zIndex: -1 }}>
-    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,#FFEDD5_40%,#FED7AA_50%,#FFEDD5_60%,white_100%)]" />
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, white 0%, hsl(var(--gradient-peach-light)) 40%, hsl(var(--gradient-peach)) 50%, hsl(var(--gradient-peach-light)) 60%, white 100%)",
+      }}
+    />
     {circles.map((c, i) => (
       <motion.div
         key={i}

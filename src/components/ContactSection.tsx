@@ -25,7 +25,7 @@ const ContactSection = () => (
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full glass-card text-foreground font-medium hover:border-primary/40 hover:shadow-[0_0_20px_rgba(251,146,60,0.2)] hover:scale-105 hover:text-[#0A192F] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full glass-card text-foreground font-medium hover:border-primary/40 hover:shadow-[0_0_20px_hsl(var(--glow-accent)/0.2)] hover:scale-105 hover:text-[hsl(var(--hover-deep))] transition-all duration-300"
           >
             <Icon size={18} /> {label}
           </a>

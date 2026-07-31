@@ -55,6 +55,10 @@ const stats: Stat[] = [
   },
 ];
 
+const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+
+
 const ImpactStats = () => {
   const [activeStat, setActiveStat] = useState<Stat | null>(null);
   const ref = useRef<HTMLDivElement>(null);
@@ -83,6 +87,8 @@ const ImpactStats = () => {
           <button
             key={s.label}
             type="button"
+            aria-expanded={activeStat?.label === s.label}
+            aria-controls={`impact-stat-dialog-${slugify(s.label)}`}
             onClick={() => setActiveStat(s)}
             className="group relative overflow-hidden rounded-2xl bg-card text-card-foreground border border-border p-6 text-left transition-[transform,box-shadow,border-color] duration-300 hover:scale-[1.02] hover:border-primary/50 hover:shadow-[0_0_28px_hsl(var(--ring)/0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
@@ -120,7 +126,16 @@ const ImpactStats = () => {
       </div>
 
       <Dialog open={!!activeStat} onOpenChange={(open) => !open && setActiveStat(null)}>
-        <DialogContent className="max-w-lg bg-card text-card-foreground text-left">
+        <DialogContent
+          id={activeStat ? `impact-stat-dialog-${slugify(activeStat.label)}` : undefined}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={activeStat ? `impact-stat-title-${slugify(activeStat.label)}` : undefined}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setActiveStat(null);
+          }}
+          className="max-w-lg bg-card text-card-foreground text-left"
+        >
           {activeStat && (
             <>
               <DialogHeader className="text-left space-y-2">
@@ -133,7 +148,10 @@ const ImpactStats = () => {
                     </span>
                   )}
                 </div>
-                <DialogTitle className="font-almarai text-lg font-bold">
+                <DialogTitle
+                  id={`impact-stat-title-${slugify(activeStat.label)}`}
+                  className="font-almarai text-lg font-bold"
+                >
                   {activeStat.label}
                 </DialogTitle>
               </DialogHeader>

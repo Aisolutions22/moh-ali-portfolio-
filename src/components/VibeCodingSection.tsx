@@ -12,7 +12,7 @@ const vibeProjects: VibeProject[] = [
   { image: "/images/vibe-coding/dashboard-1.png", title: "Ops Dashboard" },
   { image: "/images/vibe-coding/dashboard-2.png", title: "Internal Tool" },
   { image: "/images/vibe-coding/dashboard-3.png", title: "SaaS Product" },
-  { image: "/images/vibe-coding/dashboard-4.png", title: "Task Archive" },
+  { image: "/images/vibe-coding/dashboard-4.png", title: "Task Management System" },
   { image: "/images/vibe-coding/dashboard-5.png", title: "Team Task Dashboard" },
   { image: "/images/vibe-coding/dashboard-6.png", title: "Revenue GTM Console" },
 ];

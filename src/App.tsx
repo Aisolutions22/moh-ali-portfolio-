@@ -46,6 +46,14 @@ const App = () => (
                 </Suspense>
               }
             />
+            <Route
+              path="/blog/what-is-n8n-ai-automation"
+              element={
+                <Suspense fallback={null}>
+                  <WhatIsN8nAiAutomation />
+                </Suspense>
+              }
+            />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<Suspense fallback={null}><NotFound /></Suspense>} />
           </Routes>

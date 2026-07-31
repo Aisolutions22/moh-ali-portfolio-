@@ -109,7 +109,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <WhatsAppIcon size={18} /> WhatsApp
           </a>
@@ -118,7 +118,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Linkedin size={18} /> LinkedIn
           </a>
@@ -127,7 +127,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Facebook size={18} /> Facebook
           </a>

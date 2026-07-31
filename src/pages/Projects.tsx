@@ -8,7 +8,7 @@ import { projects, SITE_URL } from "@/lib/projects";
 const Projects = () => (
   <div className="min-h-screen">
     <Helmet>
-      <title>Projects — AI Automation & Agent Case Studies | AI Solutions</title>
+      <title>Mohamed Ali | Projects — AI Automation Case Studies</title>
       <meta
         name="description"
         content="Real AI automation systems built end-to-end: sales agents, lead generation engines, clinic booking, contract intelligence and more."

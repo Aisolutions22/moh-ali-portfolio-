@@ -26,11 +26,16 @@ const ProjectDetail = () => {
 
   const url = `${SITE_URL}/projects/${project.slug}`;
   const ogImage = `${SITE_URL}${project.images[0]}`;
+  const BRAND = "Mohamed Ali | ";
+  const pageTitle =
+    project.title.length + BRAND.length > 60
+      ? `${BRAND}${project.title.slice(0, 60 - BRAND.length - 1).trimEnd()}…`
+      : `${BRAND}${project.title}`;
 
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{`Mohamed Ali | ${project.title}`}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={project.shortDescription} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={project.title} />
@@ -46,10 +51,23 @@ const ProjectDetail = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
+            "@id": `${url}#article`,
+            url,
+            mainEntityOfPage: url,
             headline: project.title,
             description: project.shortDescription,
             image: ogImage,
-            author: { "@type": "Person", name: "Mohamed Ali" },
+            author: { "@type": "Person", name: "Mohamed Ali", url: `${SITE_URL}/` },
+            publisher: {
+              "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
+              name: "AI Solutions",
+              url: `${SITE_URL}/`,
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/images/og-cover.jpg`,
+              },
+            },
           })}
         </script>
       </Helmet>

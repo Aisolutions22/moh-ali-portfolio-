@@ -1,7 +1,9 @@
+import { Helmet } from "react-helmet-async";
 import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GeometricBackground from "@/components/GeometricBackground";
+
 
 const SkillsSection = lazy(() => import("@/components/SkillsSection"));
 const VibeCodingSection = lazy(() => import("@/components/VibeCodingSection"));

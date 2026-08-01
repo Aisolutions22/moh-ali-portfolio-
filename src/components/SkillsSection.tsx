@@ -9,6 +9,8 @@ interface FeatureCapability {
   desc: string;
   tags: string[];
   reverse?: boolean;
+  width: number;
+  height: number;
   href: string;
   cta?: string;
   caption?: string;
@@ -24,7 +26,9 @@ interface CardCapability {
 // Order matters: n8n first, then Vibe Coding — shown as full-width feature rows
 const featureCapabilities: FeatureCapability[] = [
   {
-    image: "/images/capabilities/n8n-architecture.png",
+    image: "/images/capabilities/n8n-architecture.webp",
+    width: 1920,
+    height: 1080,
     title: "AI Automation Architect — n8n",
     desc: "I architect production-grade automation systems on n8n — connecting APIs, AI models, and business logic into workflows that run a company's operations with minimal human intervention.",
     tags: ["n8n", "Workflow Architecture", "AI Agents"],
@@ -33,7 +37,9 @@ const featureCapabilities: FeatureCapability[] = [
     cta: "Explore My Projects",
   },
   {
-    image: "/images/capabilities/vibe-coding-lovable.png",
+    image: "/images/capabilities/vibe-coding-lovable.webp",
+    width: 1080,
+    height: 631,
     title: "Vibe Coding — AI-Native Product Development",
     desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment, without waiting on a traditional dev cycle. This covers internal business tools and dashboards, full SaaS products, marketing websites, and e-commerce stores. Every project in this portfolio, including this site itself, was built this way.",
     tags: ["Dashboards", "Websites", "E-commerce Stores", "SaaS Products"],
@@ -92,6 +98,9 @@ const SkillsSection = () => (
               <img
                 src={cap.image}
                 alt={`${cap.title} screenshot`}
+                width={cap.width}
+                height={cap.height}
+                loading="lazy"
                 className="w-full h-auto rounded-xl border border-border/60 shadow-sm group-hover:border-primary/40 transition-colors duration-300"
               />
               {cap.caption && (

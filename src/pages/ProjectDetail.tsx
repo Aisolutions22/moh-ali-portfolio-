@@ -111,6 +111,8 @@ const ProjectDetail = () => {
           <img
             src={project.images[0]}
             alt={`${project.title} main visual`}
+            width={1600}
+            height={900}
             className="mt-10 w-full h-auto rounded-2xl border border-border/60"
           />
 
@@ -127,6 +129,8 @@ const ProjectDetail = () => {
               key={img}
               src={img}
               alt={`${project.title} detail`}
+              width={1600}
+              height={900}
               loading="lazy"
               className="mt-8 w-full h-auto rounded-2xl border border-border/60"
             />

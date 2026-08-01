@@ -14,20 +14,27 @@ const AboutSection = () => (
         </span>
       </Link>
 
-      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-        Top 10 Case Studies — Selected from 32+ Projects
-      </p>
+      <div className="glass-card border border-border/60 rounded-2xl p-8 md:p-10">
+        <span className="inline-block text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20 rounded-full px-3 py-1 mb-4">
+          n8n Automation Workflows
+        </span>
 
-      <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
-        Our Projects
-      </p>
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Projects Overview</h2>
+        <p className="text-sm md:text-base font-bold text-primary mb-3">
+          Top 10 Case Studies — Selected from 32+ Projects
+        </p>
 
-      <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
-        I'm Mohamed Ali, Founder of AI Solutions | Automation &amp; AI Specialist. I build practical
-        AI systems that replace manual operations with measurable business results — across
-        industrial, commercial, and service sectors in the Gulf, the Arab world, and Egypt.
-      </p>
+        <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
+          Our Projects
+        </p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Projects Overview</h2>
+
+        <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
+          I'm Mohamed Ali, Founder of AI Solutions | Automation &amp; AI Specialist. I build practical
+          AI systems that replace manual operations with measurable business results — across
+          industrial, commercial, and service sectors in the Gulf, the Arab world, and Egypt.
+          Each case study below includes the actual n8n workflow behind it — not just the outcome, but exactly how it was built.
+        </p>
+      </div>
     </div>
   </section>
 );

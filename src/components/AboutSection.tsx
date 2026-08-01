@@ -9,11 +9,14 @@ const AboutSection = () => (
         className="group inline-flex items-center gap-2 relative overflow-hidden rounded-full px-7 py-3.5 mb-8 text-sm font-medium bg-foreground text-background shadow-lg glow-box shimmer-badge hover:scale-[1.03] hover:shadow-xl transition-all duration-300 motion-reduce:transform-none motion-reduce:shadow-lg"
       >
         <span className="relative z-10">Explore Our Projects</span>
-        <ArrowRight
-          size={16}
-          className="relative z-10 group-hover:translate-x-1 transition-transform duration-300 motion-reduce:transform-none"
-        />
+        <span className="relative z-10 flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 shimmer-badge group-hover:translate-x-1 transition-transform duration-300 motion-reduce:transform-none">
+          <ArrowRight size={14} className="text-primary" />
+        </span>
       </Link>
+
+      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+        Top 10 Case Studies — Selected from 32+ Projects
+      </p>
 
       <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
         Our Projects

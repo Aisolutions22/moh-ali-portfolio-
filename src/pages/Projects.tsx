@@ -31,6 +31,9 @@ const Projects = () => (
 
     <main className="pt-28 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
+        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+          Top 10 Case Studies — Selected from 32+ Projects
+        </p>
         <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
           Case Studies
         </p>

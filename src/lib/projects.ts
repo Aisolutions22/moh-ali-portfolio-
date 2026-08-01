@@ -123,7 +123,7 @@ export const projects: Project[] = [
       "Tasks are written straight into the team's tracker and a concise summary is emailed to attendees within minutes of the call ending.",
       "Nothing depends on someone remembering to take notes, and follow-through stopped being the weak link.",
     ],
-    images: ["/images/projects/meeting-transcription-automation.webp", DASH_3],
+    images: ["/images/projects/meeting-transcription-automation.webp", "/images/projects/meeting-transcription-automation-workflow.webp"],
     tags: ["n8n", "OpenAI", "Supabase"],
   },
   {

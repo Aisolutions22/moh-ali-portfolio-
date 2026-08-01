@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Product data, pricing, and stock live in Supabase, so the agent never quotes an unavailable item. Qualified conversations are handed to a human with the full transcript and a summary attached.",
       "Response time dropped from hours to seconds, and the store keeps converting overnight and on weekends without staffing changes.",
     ],
-    images: [DASH_2],
+    images: [DASH_2, "/images/projects/ai-sales-agent-instagram-messenger-workflow.webp"],
     tags: ["n8n", "OpenAI", "OpenRouter", "Supabase", "Messenger", "Instagram"],
   },
   {

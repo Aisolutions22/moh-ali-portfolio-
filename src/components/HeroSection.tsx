@@ -11,19 +11,18 @@ const HeroSection = () => {
       {/* Badge */}
       <div className="shimmer-badge pulse-badge inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/80 text-white mb-6 shadow-[0_0_20px_hsl(var(--glow-accent)/0.4),0_0_40px_rgba(0,82,255,0.2)]">
         <ShieldCheck size={16} className="text-emerald-400" />
-        <span className="text-sm font-medium tracking-wide">Verified AI Architecture & Digital Transformation Expert</span>
+        <span className="text-sm font-medium tracking-wide">GTM Strategist · AI Systems Architect · Builder</span>
       </div>
 
       {/* Headline */}
       <h1 className="font-extrabold leading-tight max-w-5xl mx-auto text-foreground tracking-[0.02em]" style={{ fontSize: 'clamp(1.5rem, 5vw, 4.5rem)' }}>
-        <span className="block">We Build Intelligent <span className="text-primary">Systems</span></span>
-        <span className="block">That <span className="text-primary font-extrabold italic">Scale Business.</span></span>
+        <span className="block">I Design The Strategy, Build The AI Systems,</span>
+        <span className="block">And <span className="text-primary font-extrabold italic">Ship The Product Myself.</span></span>
       </h1>
 
       {/* Founder Intro */}
       <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base leading-relaxed text-center">
-        I'm <span className="text-orange-600 font-semibold">Mohamed Ali</span>, Founder of <span className="font-bold text-foreground whitespace-nowrap">AI Solutions co.</span> With over a decade of experience in business leadership and sales management, I bridge the gap between complex AI technology and real-world business growth
-        <span className="block text-center mt-2 md:whitespace-nowrap text-[13px] sm:text-sm md:text-base">Through advanced <span className="font-bold text-foreground">Ai Stack</span><br className="block md:hidden" /> And Ai Automation With <span className="font-bold text-foreground">N8N</span></span>
+        I'm <span className="text-orange-600 font-semibold">Mohamed Ali</span>, Founder of <span className="font-bold text-foreground whitespace-nowrap">AI Solutions.</span> With a decade in business leadership, sales, and go-to-market strategy, I design growth systems for companies — then build them myself: AI automation with n8n, and the websites, stores, and digital products they run on.
       </p>
 
       {/* CTA Buttons */}

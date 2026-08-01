@@ -1,13 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import GeometricBackground from "@/components/GeometricBackground";
+import ProjectContactModal from "@/components/ProjectContactModal";
 import { getProjectBySlug, SITE_URL } from "@/lib/projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
+  const [contactType, setContactType] = useState<"demo" | "meeting" | null>(null);
 
   if (!project) {
     return (

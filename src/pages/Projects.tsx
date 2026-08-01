@@ -31,17 +31,26 @@ const Projects = () => (
 
     <main className="pt-28 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-          Top 10 Case Studies — Selected from 32+ Projects
-        </p>
-        <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
-          Case Studies
-        </p>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">All Projects</h1>
-        <p className="text-muted-foreground text-lg max-w-2xl mb-6">
-          Production automation and AI agent systems, built end-to-end. Open any project to read
-          the full case study.
-        </p>
+        <div className="glass-card border border-border/60 rounded-2xl p-8 md:p-10 mb-12">
+          <span className="inline-block text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20 rounded-full px-3 py-1 mb-4">
+            n8n Automation Workflows
+          </span>
+
+          <p className="text-sm md:text-base font-bold text-primary mb-3">
+            Top 10 Case Studies — Selected from 32+ Projects
+          </p>
+
+          <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-2">
+            Case Studies
+          </p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">All Projects</h1>
+          <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+            Production automation and AI agent systems, built end-to-end. Open any project to read
+            the full case study.
+            Each case study below includes the actual n8n workflow behind it — not just the outcome, but exactly how it was built.
+          </p>
+        </div>
+
         <p className="text-muted-foreground max-w-2xl mb-12">
           New to the stack behind these builds?{" "}
           <Link

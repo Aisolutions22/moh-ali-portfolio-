@@ -99,6 +99,12 @@ const SkillsSection = () => (
               )}
             </div>
             <div className="w-full md:w-1/2">
+              {cap.title === "Vibe Coding — AI-Native Product Development" && (
+                <span className="mb-4 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/30 glow-box font-medium">
+                  <BadgeCheck size={18} className="text-primary" aria-hidden="true" />
+                  Verified by Lovable · Confirmed via LinkedIn
+                </span>
+              )}
               <h3 className="font-semibold text-2xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                 {cap.title}
               </h3>
@@ -113,12 +119,6 @@ const SkillsSection = () => (
                   </span>
                 ))}
               </div>
-              {cap.title === "Vibe Coding — AI-Native Product Development" && (
-                <span className="mt-2 inline-flex items-center gap-1.5 text-[10px] px-2 py-1 rounded-full bg-secondary text-muted-foreground">
-                  <BadgeCheck size={12} className="text-primary" />
-                  Verified on Lovable
-                </span>
-              )}
               {cap.cta && (
                 <span className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium group-hover:scale-105 transition-transform duration-300">
                   {cap.cta} <ArrowUpRight size={14} />

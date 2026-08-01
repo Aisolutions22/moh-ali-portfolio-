@@ -14,7 +14,7 @@
 - [AI Sales Agent - Instagram & Messenger](https://aisolutions-n8n.com/projects/ai-sales-agent-instagram-messenger)
 - [WhatsApp Business API Sales Agent](https://aisolutions-n8n.com/projects/whatsapp-business-sales-agent)
 - [Telegram Study Assistant](https://aisolutions-n8n.com/projects/telegram-study-assistant)
-- [Dental Clinic Automation](https://aisolutions-n8n.com/projects/dental-clinic-automation)
+- [Ai booking automation for clinics - Omni channel in one dashboard](https://aisolutions-n8n.com/projects/dental-clinic-automation)
 - [Meeting Recording & Transcription](https://aisolutions-n8n.com/projects/meeting-transcription-automation)
 - [Contracts & Risk Management](https://aisolutions-n8n.com/projects/contracts-risk-management)
 - [Orders & Inventory Automation](https://aisolutions-n8n.com/projects/orders-inventory-automation)

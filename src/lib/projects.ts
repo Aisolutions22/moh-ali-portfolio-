@@ -95,15 +95,13 @@ export const projects: Project[] = [
   {
     slug: "dental-clinic-automation",
     sector: "Healthcare",
-    title: "Dental Clinic Automation",
-    shortDescription:
-      "End-to-end booking, reminders, and patient follow-up — without a daily admin burden.",
+    title: "Ai booking automation for clinics - Omni channel in one dashboard",
     fullDescription: [
       "A booking and retention system for a multi-chair dental clinic. Patients book over WhatsApp, availability is checked live against the clinic calendar, and confirmations are sent instantly.",
       "Automated reminders cut no-shows, and post-treatment follow-up messages go out on a schedule tied to the procedure type — recall visits, hygiene appointments, and check-ins all handled without staff involvement.",
       "The front desk stopped spending its day on the phone and started spending it with patients in the room.",
     ],
-    images: [DASH_2],
+    images: ["/images/projects/dental-clinic-automation.png", DASH_2],
     tags: ["n8n", "Supabase", "WhatsApp Business API"],
   },
   {

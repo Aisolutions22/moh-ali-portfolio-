@@ -17,6 +17,11 @@ export const useScrollToHash = () => {
   const previousPathname = useRef(pathname);
 
   useEffect(() => {
+    // Disable browser scroll restoration so we control all scroll behavior.
+    if (window.history.scrollRestoration) {
+      window.history.scrollRestoration = "manual";
+    }
+
     // Case 1: hash link -> smooth scroll to target element.
     if (hash) {
       const id = decodeURIComponent(hash.slice(1));

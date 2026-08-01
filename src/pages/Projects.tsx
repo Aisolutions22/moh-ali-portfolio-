@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import GeometricBackground from "@/components/GeometricBackground";
 import { projects, SITE_URL } from "@/lib/projects";
@@ -63,42 +63,86 @@ const Projects = () => (
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {projects.map((p) => (
-            <Link
-              key={p.slug}
-              to={`/projects/${p.slug}`}
-              className={`group flex flex-col rounded-2xl glass-card overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all duration-300 ${
-                p.flagship ? "md:col-span-3 border-primary/30 shadow-md glow-box" : ""
-              }`}
-            >
-              <img
-                src={p.images[0]}
-                alt={`${p.title} preview`}
-                width={1600}
-                height={900}
-                loading="lazy"
-                className={`w-full aspect-video object-cover border-b border-border/60 ${
-                  p.flagship ? "max-h-72" : "max-h-44"
-                }`}
-              />
-              <div className="p-6 flex flex-col flex-1">
-                <span className="self-start text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                  {p.sector}
-                </span>
-                <h2 className="mt-4 font-semibold text-lg text-foreground leading-snug">
-                  {p.title}
-                </h2>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  {p.shortDescription}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-                  View case study
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </span>
+          {projects.map((p) =>
+            p.flagship ? (
+              <div
+                key={p.slug}
+                className="group flex flex-col rounded-2xl glass-card overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all duration-300 md:col-span-3 border-primary/30 shadow-md glow-box"
+              >
+                <Link to={`/projects/${p.slug}`} className="flex flex-col">
+                  <img
+                    src={p.images[0]}
+                    alt={`${p.title} preview`}
+                    width={1600}
+                    height={900}
+                    loading="lazy"
+                    className="w-full aspect-video object-cover border-b border-border/60 max-h-72"
+                  />
+                  <div className="px-6 pt-6 flex flex-col">
+                    <span className="self-start text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                      {p.sector}
+                    </span>
+                    <h2 className="mt-4 font-semibold text-lg text-foreground leading-snug">
+                      {p.title}
+                    </h2>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                      {p.shortDescription}
+                    </p>
+                  </div>
+                </Link>
+                <div className="px-6 pb-6 pt-4 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to={`/projects/${p.slug}`}
+                    className="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                  >
+                    View Case Study
+                    <ArrowRight size={14} />
+                  </Link>
+                  <a
+                    href="https://ai-marketing-solutions.lovable.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary text-primary px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors"
+                  >
+                    Try Live Demo
+                    <ArrowUpRight size={14} />
+                  </a>
+                </div>
               </div>
-            </Link>
-          ))}
+            ) : (
+              <Link
+                key={p.slug}
+                to={`/projects/${p.slug}`}
+                className="group flex flex-col rounded-2xl glass-card overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+              >
+                <img
+                  src={p.images[0]}
+                  alt={`${p.title} preview`}
+                  width={1600}
+                  height={900}
+                  loading="lazy"
+                  className="w-full aspect-video object-cover border-b border-border/60 max-h-44"
+                />
+                <div className="p-6 flex flex-col flex-1">
+                  <span className="self-start text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                    {p.sector}
+                  </span>
+                  <h2 className="mt-4 font-semibold text-lg text-foreground leading-snug">
+                    {p.title}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {p.shortDescription}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                    View case study
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            )
+          )}
         </div>
+
       </div>
     </main>
 

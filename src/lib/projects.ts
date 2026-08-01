@@ -88,7 +88,10 @@ export const projects: Project[] = [
       "The student answers inside the chat, the assistant grades and explains mistakes, and a progress report is sent automatically to the parent at the end of each session.",
       "It gives families a tutor-like feedback loop at effectively zero marginal cost per student.",
     ],
-    images: ["/images/projects/telegram-study-assistant.webp", "/images/projects/telegram-study-assistant-workflow.webp", DASH_1],
+    images: [
+      "/images/projects/telegram-study-assistant.webp",
+      "/images/projects/telegram-study-assistant-workflow.webp",
+    ],
     tags: ["n8n", "OpenAI", "Telegram"],
     featured: true,
   },

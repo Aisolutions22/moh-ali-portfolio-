@@ -1,13 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import GeometricBackground from "@/components/GeometricBackground";
+import ProjectContactModal from "@/components/ProjectContactModal";
 import { getProjectBySlug, SITE_URL } from "@/lib/projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
+  const [contactType, setContactType] = useState<"demo" | "meeting" | null>(null);
 
   if (!project) {
     return (
@@ -148,6 +151,30 @@ const ProjectDetail = () => {
               />
             </div>
           )}
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-3">
+            <button
+              type="button"
+              onClick={() => setContactType("demo")}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:scale-105 transition-transform duration-300 motion-reduce:transform-none motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              Request a Demo
+            </button>
+            <button
+              type="button"
+              onClick={() => setContactType("meeting")}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-border text-sm font-medium text-foreground hover:border-primary/40 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              Book a Meeting
+            </button>
+          </div>
+
+          <ProjectContactModal
+            type={contactType ?? "demo"}
+            projectTitle={project.title}
+            open={contactType !== null}
+            onClose={() => setContactType(null)}
+          />
 
           <div className="mt-14 p-8 rounded-2xl glass-card border border-primary/30 text-center">
             <h2 className="text-xl font-semibold text-foreground">

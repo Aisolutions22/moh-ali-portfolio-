@@ -96,6 +96,8 @@ export const projects: Project[] = [
     slug: "dental-clinic-automation",
     sector: "Healthcare",
     title: "Ai booking automation for clinics - Omni channel in one dashboard",
+    shortDescription:
+      "End-to-end booking, reminders, and patient follow-up — without a daily admin burden.",
     fullDescription: [
       "A booking and retention system for a multi-chair dental clinic. Patients book over WhatsApp, availability is checked live against the clinic calendar, and confirmations are sent instantly.",
       "Automated reminders cut no-shows, and post-treatment follow-up messages go out on a schedule tied to the procedure type — recall visits, hygiene appointments, and check-ins all handled without staff involvement.",

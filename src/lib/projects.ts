@@ -136,7 +136,7 @@ export const projects: Project[] = [
   {
     slug: "orders-inventory-automation",
     sector: "Retail",
-    title: "Orders & Inventory Automation",
+    title: "E-Commerce Orders & Inventory Automation",
     shortDescription:
       "Stock levels, orders, and supplier data that sync and run themselves, so overselling and daily reconciliation admin simply stop.",
     fullDescription: [
@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "Low-stock thresholds trigger purchase suggestions, and fulfilment status updates flow back to the customer automatically.",
       "Daily reconciliation admin disappeared, and overselling stopped being a recurring problem.",
     ],
-    images: [LOVABLE_IMG],
+    images: ["/images/projects/orders-inventory-automation.png"],
     tags: ["n8n", "Supabase"],
   },
 ];

@@ -17,7 +17,7 @@
 - [Ai booking automation for clinics - Omni channel in one dashboard](https://aisolutions-n8n.com/projects/dental-clinic-automation)
 - [Meeting Recording & Transcription](https://aisolutions-n8n.com/projects/meeting-transcription-automation)
 - [Contracts & Risk Management](https://aisolutions-n8n.com/projects/contracts-risk-management)
-- [Orders & Inventory Automation](https://aisolutions-n8n.com/projects/orders-inventory-automation)
+- [E-Commerce Orders & Inventory Automation](https://aisolutions-n8n.com/projects/orders-inventory-automation)
 
 ## Contact
 

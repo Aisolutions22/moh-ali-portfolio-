@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "Risky terms — uncapped liability, auto-renewal, one-sided termination, payment traps — are flagged with severity and a plain-language explanation, then escalated to the right reviewer automatically.",
       "Review time per contract dropped dramatically, and issues now surface before signature rather than during a dispute.",
     ],
-    images: ["/images/projects/contracts-risk-management.webp"],
+    images: ["/images/projects/contracts-risk-management.webp", "/images/projects/contracts-risk-management-workflow.webp"],
     tags: ["n8n", "OpenAI", "Supabase"],
   },
   {

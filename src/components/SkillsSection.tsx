@@ -24,7 +24,7 @@ interface CardCapability {
 // Order matters: n8n first, then Vibe Coding — shown as full-width feature rows
 const featureCapabilities: FeatureCapability[] = [
   {
-    image: "/images/capabilities/n8n-architecture.png",
+    image: "/images/capabilities/n8n-architecture.webp",
     title: "AI Automation Architect — n8n",
     desc: "I architect production-grade automation systems on n8n — connecting APIs, AI models, and business logic into workflows that run a company's operations with minimal human intervention.",
     tags: ["n8n", "Workflow Architecture", "AI Agents"],
@@ -33,7 +33,7 @@ const featureCapabilities: FeatureCapability[] = [
     cta: "Explore My Projects",
   },
   {
-    image: "/images/capabilities/vibe-coding-lovable.png",
+    image: "/images/capabilities/vibe-coding-lovable.webp",
     title: "Vibe Coding — AI-Native Product Development",
     desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment, without waiting on a traditional dev cycle. This covers internal business tools and dashboards, full SaaS products, marketing websites, and e-commerce stores. Every project in this portfolio, including this site itself, was built this way.",
     tags: ["Dashboards", "Websites", "E-commerce Stores", "SaaS Products"],

@@ -11,11 +11,11 @@ export interface Project {
   featured?: boolean;
 }
 
-const N8N_IMG = "/images/capabilities/n8n-architecture.png";
-const LOVABLE_IMG = "/images/capabilities/vibe-coding-lovable.png";
-const DASH_1 = "/images/vibe-coding/dashboard-1.png";
-const DASH_2 = "/images/vibe-coding/dashboard-2.png";
-const DASH_3 = "/images/vibe-coding/dashboard-3.png";
+const N8N_IMG = "/images/capabilities/n8n-architecture.webp";
+const LOVABLE_IMG = "/images/capabilities/vibe-coding-lovable.webp";
+const DASH_1 = "/images/vibe-coding/dashboard-1.webp";
+const DASH_2 = "/images/vibe-coding/dashboard-2.webp";
+const DASH_3 = "/images/vibe-coding/dashboard-3.webp";
 
 // NOTE: "AI-Driven Marketing & E-commerce Automation System" must always remain
 // the first item here and keep flagship: true. Never remove it.
@@ -31,7 +31,7 @@ export const projects: Project[] = [
       "Product feeds, customer events, and ad performance data are pulled into n8n workflows, enriched, and passed to AI agents that write and schedule campaign creative, respond to inbound interest across channels, and segment buyers by behaviour rather than static lists.",
       "Every action is logged to an automated dashboard, so the owner sees revenue, cost per acquisition, and pipeline movement daily without a single manual report. The result is a growth engine that compounds instead of a monthly ad retainer.",
     ],
-    images: ["/images/projects/ai-marketing-ecommerce-automation.png", N8N_IMG],
+    images: ["/images/projects/ai-marketing-ecommerce-automation.webp", N8N_IMG],
     videoUrl: "",
     tags: ["AI", "n8n", "Shopify", "WooCommerce", "Marketing AI"],
     flagship: true,
@@ -47,7 +47,7 @@ export const projects: Project[] = [
       "Each record is enriched with firmographics, verified email, and a short AI-written relevance note explaining why this lead fits — so the sales rep opens the day with context, not a raw spreadsheet.",
       "The workflow runs on a schedule and delivers a clean, scored list every morning. What previously took a full day of research per week now takes zero human hours.",
     ],
-    images: ["/images/projects/lead-generation-engine.png", N8N_IMG],
+    images: ["/images/projects/lead-generation-engine.webp", N8N_IMG],
     tags: ["n8n", "Apify", "Apollo", "Google Maps", "LinkedIn"],
   },
   {
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       "It keeps per-customer memory in Supabase, so returning buyers are recognised and past orders inform recommendations. Escalation rules route anything sensitive — refunds, complaints, bulk pricing — to a human instantly.",
       "One system now covers the daily volume that previously required a five-person desk, with consistent answers and zero missed messages.",
     ],
-    images: ["/images/projects/whatsapp-business-sales-agent.png"],
+    images: ["/images/projects/whatsapp-business-sales-agent.webp"],
     tags: ["n8n", "OpenAI", "OpenRouter", "Supabase", "WhatsApp Business API"],
   },
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       "The student answers inside the chat, the assistant grades and explains mistakes, and a progress report is sent automatically to the parent at the end of each session.",
       "It gives families a tutor-like feedback loop at effectively zero marginal cost per student.",
     ],
-    images: ["/images/projects/telegram-study-assistant.png", DASH_1],
+    images: ["/images/projects/telegram-study-assistant.webp", DASH_1],
     tags: ["n8n", "OpenAI", "Telegram"],
     featured: true,
   },
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "Automated reminders cut no-shows, and post-treatment follow-up messages go out on a schedule tied to the procedure type — recall visits, hygiene appointments, and check-ins all handled without staff involvement.",
       "The front desk stopped spending its day on the phone and started spending it with patients in the room.",
     ],
-    images: ["/images/projects/dental-clinic-automation.png", DASH_2],
+    images: ["/images/projects/dental-clinic-automation.webp", DASH_2],
     tags: ["n8n", "Supabase", "WhatsApp Business API"],
   },
   {
@@ -117,7 +117,7 @@ export const projects: Project[] = [
       "Tasks are written straight into the team's tracker and a concise summary is emailed to attendees within minutes of the call ending.",
       "Nothing depends on someone remembering to take notes, and follow-through stopped being the weak link.",
     ],
-    images: ["/images/projects/meeting-transcription-automation.png", DASH_3],
+    images: ["/images/projects/meeting-transcription-automation.webp", DASH_3],
     tags: ["n8n", "OpenAI", "Supabase"],
   },
   {
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       "Risky terms — uncapped liability, auto-renewal, one-sided termination, payment traps — are flagged with severity and a plain-language explanation, then escalated to the right reviewer automatically.",
       "Review time per contract dropped dramatically, and issues now surface before signature rather than during a dispute.",
     ],
-    images: ["/images/projects/contracts-risk-management.png"],
+    images: ["/images/projects/contracts-risk-management.webp"],
     tags: ["n8n", "OpenAI", "Supabase"],
   },
   {
@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "Low-stock thresholds trigger purchase suggestions, and fulfilment status updates flow back to the customer automatically.",
       "Daily reconciliation admin disappeared, and overselling stopped being a recurring problem.",
     ],
-    images: ["/images/projects/orders-inventory-automation.png"],
+    images: ["/images/projects/orders-inventory-automation.webp"],
     tags: ["n8n", "Supabase"],
   },
 ];

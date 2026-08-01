@@ -9,12 +9,12 @@ interface VibeProject {
 // Add one entry per dashboard/app screenshot — the grid handles any count
 // (3 per row on desktop; an uneven last row, e.g. 2, is expected and fine)
 const vibeProjects: VibeProject[] = [
-  { image: "/images/vibe-coding/dashboard-1.png", title: "Ops Dashboard" },
-  { image: "/images/vibe-coding/dashboard-2.png", title: "Internal Tool" },
-  { image: "/images/vibe-coding/dashboard-3.png", title: "SaaS Product" },
-  { image: "/images/vibe-coding/dashboard-4.png", title: "Task Management System" },
-  { image: "/images/vibe-coding/dashboard-5.png", title: "Team Task Dashboard" },
-  { image: "/images/vibe-coding/dashboard-6.png", title: "Revenue GTM Console" },
+  { image: "/images/vibe-coding/dashboard-1.webp", title: "Ops Dashboard" },
+  { image: "/images/vibe-coding/dashboard-2.webp", title: "Internal Tool" },
+  { image: "/images/vibe-coding/dashboard-3.webp", title: "SaaS Product" },
+  { image: "/images/vibe-coding/dashboard-4.webp", title: "Task Management System" },
+  { image: "/images/vibe-coding/dashboard-5.webp", title: "Team Task Dashboard" },
+  { image: "/images/vibe-coding/dashboard-6.webp", title: "Revenue GTM Console" },
 ];
 
 const VibeCodingSection = () => (

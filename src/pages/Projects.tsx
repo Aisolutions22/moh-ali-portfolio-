@@ -74,8 +74,10 @@ const Projects = () => (
               <img
                 src={p.images[0]}
                 alt={`${p.title} preview`}
+                width={1600}
+                height={900}
                 loading="lazy"
-                className={`w-full object-cover border-b border-border/60 ${
+                className={`w-full aspect-video object-cover border-b border-border/60 ${
                   p.flagship ? "max-h-72" : "max-h-44"
                 }`}
               />

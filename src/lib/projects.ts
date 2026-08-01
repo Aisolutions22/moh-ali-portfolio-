@@ -74,7 +74,7 @@ export const projects: Project[] = [
       "It keeps per-customer memory in Supabase, so returning buyers are recognised and past orders inform recommendations. Escalation rules route anything sensitive — refunds, complaints, bulk pricing — to a human instantly.",
       "One system now covers the daily volume that previously required a five-person desk, with consistent answers and zero missed messages.",
     ],
-    images: [DASH_3],
+    images: ["/images/projects/whatsapp-business-sales-agent.png"],
     tags: ["n8n", "OpenAI", "OpenRouter", "Supabase", "WhatsApp Business API"],
   },
   {

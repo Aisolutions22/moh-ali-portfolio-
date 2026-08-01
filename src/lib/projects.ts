@@ -150,7 +150,7 @@ export const projects: Project[] = [
       "Low-stock thresholds trigger purchase suggestions, and fulfilment status updates flow back to the customer automatically.",
       "Daily reconciliation admin disappeared, and overselling stopped being a recurring problem.",
     ],
-    images: ["/images/projects/orders-inventory-automation.webp"],
+    images: ["/images/projects/orders-inventory-automation.webp", "/images/projects/orders-inventory-automation-workflow.webp"],
     tags: ["n8n", "Supabase"],
   },
 ];

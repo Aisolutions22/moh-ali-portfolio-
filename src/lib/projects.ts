@@ -47,7 +47,7 @@ export const projects: Project[] = [
       "Each record is enriched with firmographics, verified email, and a short AI-written relevance note explaining why this lead fits — so the sales rep opens the day with context, not a raw spreadsheet.",
       "The workflow runs on a schedule and delivers a clean, scored list every morning. What previously took a full day of research per week now takes zero human hours.",
     ],
-    images: [N8N_IMG],
+    images: ["/images/projects/lead-generation-engine.png", N8N_IMG],
     tags: ["n8n", "Apify", "Apollo", "Google Maps", "LinkedIn"],
   },
   {

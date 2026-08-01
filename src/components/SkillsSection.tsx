@@ -36,7 +36,7 @@ const featureCapabilities: FeatureCapability[] = [
     image: "/images/capabilities/vibe-coding-lovable.png",
     title: "Vibe Coding — AI-Native Product Development",
     desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment, without waiting on a traditional dev cycle. This covers internal business tools and dashboards, full SaaS products, marketing websites, and e-commerce stores. Every project in this portfolio, including this site itself, was built this way.",
-    tags: ["Lovable", "Rapid Shipping", "0 → 1"],
+    tags: ["Dashboards", "Websites", "E-commerce Stores", "SaaS Products"],
     reverse: true,
     href: "/#vibe-coding-projects",
     caption: "Build business applications, internal tools, and SaaS products in Lovable",
@@ -100,7 +100,7 @@ const SkillsSection = () => (
             </div>
             <div className="w-full md:w-1/2">
               {cap.title === "Vibe Coding — AI-Native Product Development" && (
-                <span className="mb-4 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/30 glow-box font-medium">
+                <span className="mb-4 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/30 shimmer-badge pulse-badge font-medium">
                   <BadgeCheck size={18} className="text-primary" aria-hidden="true" />
                   Verified by Lovable · Confirmed via LinkedIn
                 </span>
@@ -109,7 +109,7 @@ const SkillsSection = () => (
                 {cap.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">{cap.desc}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className={`flex flex-wrap gap-2 ${cap.title === "Vibe Coding — AI-Native Product Development" ? "shimmer-badge" : ""}`}>
                 {cap.tags.map((t) => (
                   <span
                     key={t}

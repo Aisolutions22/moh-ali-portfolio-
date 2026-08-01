@@ -31,7 +31,7 @@ export const projects: Project[] = [
       "Product feeds, customer events, and ad performance data are pulled into n8n workflows, enriched, and passed to AI agents that write and schedule campaign creative, respond to inbound interest across channels, and segment buyers by behaviour rather than static lists.",
       "Every action is logged to an automated dashboard, so the owner sees revenue, cost per acquisition, and pipeline movement daily without a single manual report. The result is a growth engine that compounds instead of a monthly ad retainer.",
     ],
-    images: ["/images/projects/ai-marketing-ecommerce-automation.webp", N8N_IMG],
+    images: ["/images/projects/ai-marketing-ecommerce-automation.webp", "/images/projects/ai-marketing-ecommerce-automation-workflow.webp"],
     videoUrl: "",
     tags: ["AI", "n8n", "Shopify", "WooCommerce", "Marketing AI"],
     flagship: true,

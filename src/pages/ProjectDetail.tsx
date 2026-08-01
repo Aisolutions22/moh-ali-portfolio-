@@ -127,6 +127,22 @@ const ProjectDetail = () => {
             ))}
           </div>
 
+          {project.slug === "ai-marketing-ecommerce-automation" && (
+            <div className="mt-10">
+              <a
+                href="https://ai-marketing-solutions.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:scale-105 transition-transform duration-300 motion-reduce:transform-none motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Try the Live Dashboard Demo <span aria-hidden="true">→</span>
+              </a>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Simulated client dashboard — explore the controls yourself
+              </p>
+            </div>
+          )}
+
           {project.images.slice(1).map((img) => (
             <img
               key={img}

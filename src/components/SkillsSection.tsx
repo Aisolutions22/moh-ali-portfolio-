@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import { Compass, Target, type LucideIcon } from "lucide-react";
 
 interface FeatureCapability {
@@ -35,7 +35,7 @@ const featureCapabilities: FeatureCapability[] = [
   {
     image: "/images/capabilities/vibe-coding-lovable.png",
     title: "Vibe Coding — AI-Native Product Development",
-    desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment — without waiting on a traditional dev cycle. Every project in this portfolio was built this way.",
+    desc: "I design and ship full products end-to-end inside AI-native builders — from first prompt to live deployment, without waiting on a traditional dev cycle. This covers internal business tools and dashboards, full SaaS products, marketing websites, and e-commerce stores. Every project in this portfolio, including this site itself, was built this way.",
     tags: ["Lovable", "Rapid Shipping", "0 → 1"],
     reverse: true,
     href: "/#vibe-coding-projects",
@@ -113,6 +113,12 @@ const SkillsSection = () => (
                   </span>
                 ))}
               </div>
+              {cap.title === "Vibe Coding — AI-Native Product Development" && (
+                <span className="mt-2 inline-flex items-center gap-1.5 text-[10px] px-2 py-1 rounded-full bg-secondary text-muted-foreground">
+                  <BadgeCheck size={12} className="text-primary" />
+                  Verified on Lovable
+                </span>
+              )}
               {cap.cta && (
                 <span className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium group-hover:scale-105 transition-transform duration-300">
                   {cap.cta} <ArrowUpRight size={14} />

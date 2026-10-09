@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import { useScrollToHash } from "@/hooks/useScrollToHash";
+import { initAnalytics, usePageViews } from "@/lib/analytics";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const Projects = lazy(() => import("./pages/Projects.tsx"));
@@ -15,8 +16,11 @@ const WhatIsN8nAiAutomation = lazy(() => import("./pages/WhatIsN8nAiAutomation.t
 
 const queryClient = new QueryClient();
 
+initAnalytics();
+
 const ScrollToHash = () => {
   useScrollToHash();
+  usePageViews();
   return null;
 };
 

@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import ImpactStats from "./ImpactStats";
 
@@ -39,6 +39,13 @@ const HeroSection = () => {
           className="cta-shimmer-secondary relative overflow-hidden inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-primary text-primary font-medium shadow-[0_0_12px_hsl(var(--ring)/0.15)] hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_24px_hsl(var(--ring)/0.4)] transition-all duration-300"
         >
           Get In Touch
+        </a>
+        <a
+          href="/downloads/mohamed-ali-cv.pdf"
+          download="Mohamed Ali.pdf"
+          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-border text-foreground font-medium hover:border-primary hover:text-primary transition-all duration-300"
+        >
+          <Download size={18} /> Download CV
         </a>
       </div>
 

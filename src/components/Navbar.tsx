@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Linkedin, Facebook } from "lucide-react";
+import { Menu, X, Linkedin, Facebook, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
@@ -20,6 +20,8 @@ const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
 const WHATSAPP_URL = "https://wa.me/201007292223";
 const LINKEDIN_URL = "https://www.linkedin.com/in/mohamed-%C3%A5li-";
 const FACEBOOK_URL = "https://www.facebook.com/share/1Cd3zk5ZU7/";
+const CV_URL = "/downloads/mohamed-ali-cv.pdf";
+const CV_FILENAME = "Mohamed Ali.pdf";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -72,6 +74,13 @@ const Navbar = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <Facebook size={18} />
+          </a>
+          <a
+            href={CV_URL}
+            download={CV_FILENAME}
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+          >
+            <Download size={15} /> CV
           </a>
           <Link
             to="/#contact"
@@ -130,6 +139,14 @@ const Navbar = () => {
             className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Facebook size={18} /> Facebook
+          </a>
+          <a
+            href={CV_URL}
+            download={CV_FILENAME}
+            onClick={() => setOpen(false)}
+            className="flex w-full items-center justify-center gap-2 px-5 py-2 rounded-full border border-primary text-primary text-sm font-medium"
+          >
+            <Download size={16} /> Download CV
           </a>
           <Link
             to="/#contact"

@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, Download } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import ImpactStats from "./ImpactStats";
 

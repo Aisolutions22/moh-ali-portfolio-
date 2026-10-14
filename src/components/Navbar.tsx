@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Linkedin, Facebook } from "lucide-react";
+import { Menu, X, Linkedin, Facebook, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
@@ -13,13 +13,15 @@ const navLinks = [
 // Simple inline WhatsApp glyph (lucide-react has no official WhatsApp brand icon)
 const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.98.52 3.85 1.5 5.51L2 22l4.75-1.6a9.9 9.9 0 0 0 5.29 1.53h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.91-7.01A9.86 9.86 0 0 0 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.14-1.14l-.3-.18-3.08.99.99-2.99-.19-.32a8.13 8.13 0 0 1-1.25-4.35c0-4.49 3.65-8.14 8.14-8.14 2.17 0 4.21.85 5.75 2.39a8.08 8.08 0 0 1 2.38 5.76c0 4.49-3.65 8.14-8.14 8.14Zm4.47-6.1c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z" />
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.980.52 3.85 1.5 5.51L2 22l4.75-1.6a9.9 9.9 0 0 0 5.29 1.530h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.030-5.14-2.91-7.01A9.86 9.86 0 0 0 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.14-1.14l-.3-.18-3.080.99.99-2.99-.19-.32a8.13 8.13 0 0 1-1.25-4.35c0-4.49 3.65-8.14 8.14-8.14 2.17 0 4.21.85 5.75 2.39a8.08 8.08 0 0 1 2.38 5.76c0 4.49-3.65 8.14-8.14 8.14Zm4.47-6.1c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.29.18-.53.06-.24-.12-1.020-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.030.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.060.14-1.16-.06-.1-.22-.16-.46-.28Z" />
   </svg>
 );
 
 const WHATSAPP_URL = "https://wa.me/201007292223";
 const LINKEDIN_URL = "https://www.linkedin.com/in/mohamed-%C3%A5li-";
 const FACEBOOK_URL = "https://www.facebook.com/share/1Cd3zk5ZU7/";
+const CV_URL = "/downloads/mohamed-ali-cv.pdf";
+const CV_FILENAME = "Mohamed Ali.pdf";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -72,6 +74,13 @@ const Navbar = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <Facebook size={18} />
+          </a>
+          <a
+            href={CV_URL}
+            download={CV_FILENAME}
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+          >
+            <Download size={15} /> CV
           </a>
           <Link
             to="/#contact"
@@ -130,6 +139,14 @@ const Navbar = () => {
             className="flex w-full items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <Facebook size={18} /> Facebook
+          </a>
+          <a
+            href={CV_URL}
+            download={CV_FILENAME}
+            onClick={() => setOpen(false)}
+            className="flex w-full items-center justify-center gap-2 px-5 py-2 rounded-full border border-primary text-primary text-sm font-medium"
+          >
+            <Download size={16} /> Download CV
           </a>
           <Link
             to="/#contact"

@@ -6,6 +6,22 @@
 > across 10 industries, including aluminum & manufacturing, GTM/B2B sales,
 > hospitality, real estate, healthcare, and education.
 
+Mohamed Ali is a GTM Strategist and AI Systems Architect with 13+ years of
+commercial leadership in pharma and B2B (managed a 1.2B EGP annual target, led
+a 24-person field team, government tenders and national health programs). He
+designs the strategy, builds the AI systems himself, and ships the product.
+
+Services: n8n workflow automation, AI sales agents (WhatsApp, Instagram,
+Messenger), lead generation engines, clinic booking automation, contract risk
+analysis, e-commerce order & inventory automation, GTM & B2B sales strategy,
+custom web apps built with Lovable (Vibe Coding).
+
+## Pages
+
+- [Home](https://aisolutions-n8n.com/): Overview, capabilities, process, contact.
+- [What is n8n AI automation](https://aisolutions-n8n.com/blog/what-is-n8n-ai-automation): Guide article.
+- [CV (PDF)](https://aisolutions-n8n.com/downloads/mohamed-ali-cv.pdf): Full résumé.
+
 ## Projects
 
 - [All Projects](https://aisolutions-n8n.com/projects)

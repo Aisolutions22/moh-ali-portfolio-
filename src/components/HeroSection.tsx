@@ -40,13 +40,6 @@ const HeroSection = () => {
         >
           Get In Touch
         </a>
-        <a
-          href="/downloads/mohamed-ali-cv.pdf"
-          download="Mohamed Ali.pdf"
-          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-border text-foreground font-medium hover:border-primary hover:text-primary transition-all duration-300"
-        >
-          <Download size={18} /> Download CV
-        </a>
       </div>
 
       {/* Impact Stats — interactive / expandable */}

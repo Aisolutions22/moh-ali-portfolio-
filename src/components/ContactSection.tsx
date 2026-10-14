@@ -3,7 +3,7 @@ import { Mail, MessageCircle, Linkedin, Facebook } from "lucide-react";
 const socials = [
   { icon: Mail, label: "Email", href: "mailto:sales@aisolutions22.cloud" },
   { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/201007292223" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mohamed-%C3%A5li-" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/moh-ali-ai-solutions/" },
   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/share/1Cd3zk5ZU7/" },
 ];
 

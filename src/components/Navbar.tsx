@@ -18,7 +18,7 @@ const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
 );
 
 const WHATSAPP_URL = "https://wa.me/201007292223";
-const LINKEDIN_URL = "https://www.linkedin.com/in/mohamed-%C3%A5li-";
+const LINKEDIN_URL = "https://www.linkedin.com/in/moh-ali-ai-solutions/";
 const FACEBOOK_URL = "https://www.facebook.com/share/1Cd3zk5ZU7/";
 const CV_URL = "/downloads/mohamed-ali-cv.pdf";
 const CV_FILENAME = "Mohamed Ali.pdf";
